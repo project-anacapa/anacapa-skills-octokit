@@ -25,11 +25,20 @@ You'll get a 40-character access token, something like:
 
  92342983fae9098090990d098098b098098c0980e009989a
 
+Then, you'll want to do:
+
+```
+gem install octokit
+```
+
+
 So then, you'll want to use an interactive Ruby REPL such as irb or pry (try `gem install pry` if `pry` doesn't work at the command line.)
 
 In that REPL, first do:
 
- require('octokit')
+```
+ require 'octokit'
+```
 
 Then you should be able to type:
 
