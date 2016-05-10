@@ -54,7 +54,16 @@ And it should work.  For example:
 [4] pry(main)> 
 ```
 
-Then what can you do?  Try reading this documentation for some clues:
+Then what can you do?  First try this:
 
-* https://github.com/octokit/octokit.rb#oauth-access-tokens
+```
+user = client.user
+user.login
+```
+
+You should see your own login name.   The user object now has many other properties associated with you.
+
+Try reading the README of this repo for some additional clues of things to try:
+
+* https://github.com/octokit/octokit.rb
 
