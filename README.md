@@ -21,7 +21,31 @@ You might want to make a temporary text document in a text editor and paste it i
 
 * https://help.github.com/articles/creating-an-access-token-for-command-line-use/
 
-Then, try reading this documentation:
+You'll get a 40-character access token, something like:
+
+ 92342983fae9098090990d098098b098098c0980e009989a
+
+So then, you'll want to use an interactive Ruby REPL such as irb or pry (try `gem install pry` if `pry` doesn't work at the command line.)
+
+In that REPL, first do:
+
+ require('octokit')
+
+Then you should be able to type:
+
+ client = Octokit::Client.new(:access_token => "Your 40 character token here")
+
+And it should work.  For example:
+
+```
+[2] pry(main)> require 'octokit'
+=> true
+[3] pry(main)> client = Octokit::Client.new(:access_token => "8987a98797b978987987c98797ed9879d")
+=> #<Octokit::Client:0x3fd376dcdb18>
+[4] pry(main)> 
+```
+
+Then what can you do?  Try reading this documentation for some clues:
 
 * https://github.com/octokit/octokit.rb#oauth-access-tokens
 
